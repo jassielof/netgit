@@ -1,9 +1,37 @@
-import cyclopts
+import typer
 
-app = cyclopts.App(
+app = typer.Typer(
     name="netgit",
-    usage="NET-Git is a Git-based .NET tool manager CLI.",
-
 )
-app.register_install_completion_command()
 
+
+@app.command()
+def install(
+    git_url: str,
+    csproj: str,
+    branc: str,
+    alias: str,
+    dir_path: str,
+):
+    """
+    Install a tool from a git repository
+    """
+    print("git url:", git_url)
+
+
+@app.command()
+def update():
+    pass
+
+
+@app.command()
+def remove():
+    pass
+
+
+@app.command()
+def list():
+    """
+    Docstring for list
+    """
+    pass
