@@ -1,0 +1,19 @@
+[project]
+name = "netgit"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jassiel Ovando", email = "jassielovando@protonmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "cyclopts>=4.2.3",
+]
+
+[project.scripts]
+netgit = "netgit:main"
+
+[build-system]
+requires = ["uv_build>=0.9.9,<0.10.0"]
+build-backend = "uv_build"
